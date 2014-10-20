@@ -10,14 +10,53 @@
 		47291A9D19F51DE20015E575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47291A9C19F51DE20015E575 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		47E1997219F5540C0095C72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC12323D1391D5CC00131607;
+			remoteInfo = SBJson;
+		};
+		47E1997419F5540C0095C72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC1232521391D5CC00131607;
+			remoteInfo = SBJsonTests;
+		};
+		47E1997619F5540C0095C72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2626913920FC7003D9994;
+			remoteInfo = "sbjson-ios";
+		};
+		47E1997819F5540C0095C72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCC2627313920FC7003D9994;
+			remoteInfo = "sbjson-iosTests";
+		};
+		47E1997A19F5541E0095C72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC12323C1391D5CC00131607;
+			remoteInfo = SBJson;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		47291A9719F51DE20015E575 /* CopyFiles */ = {
+		47291A9719F51DE20015E575 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -25,6 +64,7 @@
 /* Begin PBXFileReference section */
 		47291A9919F51DE20015E575 /* DynamicFrameworkLoading */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DynamicFrameworkLoading; sourceTree = BUILT_PRODUCTS_DIR; };
 		47291A9C19F51DE20015E575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47E1996B19F5540B0095C72A /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = SBJson/SBJson.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +81,7 @@
 		47291A9019F51DE20015E575 = {
 			isa = PBXGroup;
 			children = (
+				47E1996B19F5540B0095C72A /* SBJson.xcodeproj */,
 				47291A9B19F51DE20015E575 /* DynamicFrameworkLoading */,
 				47291A9A19F51DE20015E575 /* Products */,
 			);
@@ -62,6 +103,17 @@
 			path = DynamicFrameworkLoading;
 			sourceTree = "<group>";
 		};
+		47E1996C19F5540B0095C72A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47E1997319F5540C0095C72A /* SBJson.framework */,
+				47E1997519F5540C0095C72A /* SBJsonTests.octest */,
+				47E1997719F5540C0095C72A /* libsbjson-ios.a */,
+				47E1997919F5540C0095C72A /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,11 +123,12 @@
 			buildPhases = (
 				47291A9519F51DE20015E575 /* Sources */,
 				47291A9619F51DE20015E575 /* Frameworks */,
-				47291A9719F51DE20015E575 /* CopyFiles */,
+				47291A9719F51DE20015E575 /* Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47E1997B19F5541E0095C72A /* PBXTargetDependency */,
 			);
 			name = DynamicFrameworkLoading;
 			productName = DynamicFrameworkLoading;
@@ -106,12 +159,49 @@
 			mainGroup = 47291A9019F51DE20015E575;
 			productRefGroup = 47291A9A19F51DE20015E575 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 47E1996C19F5540B0095C72A /* Products */;
+					ProjectRef = 47E1996B19F5540B0095C72A /* SBJson.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				47291A9819F51DE20015E575 /* DynamicFrameworkLoading */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		47E1997319F5540C0095C72A /* SBJson.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SBJson.framework;
+			remoteRef = 47E1997219F5540C0095C72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47E1997519F5540C0095C72A /* SBJsonTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SBJsonTests.octest;
+			remoteRef = 47E1997419F5540C0095C72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47E1997719F5540C0095C72A /* libsbjson-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libsbjson-ios.a";
+			remoteRef = 47E1997619F5540C0095C72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47E1997919F5540C0095C72A /* sbjson-iosTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "sbjson-iosTests.octest";
+			remoteRef = 47E1997819F5540C0095C72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47291A9519F51DE20015E575 /* Sources */ = {
@@ -123,6 +213,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47E1997B19F5541E0095C72A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SBJson;
+			targetProxy = 47E1997A19F5541E0095C72A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		47291A9E19F51DE20015E575 /* Debug */ = {
@@ -202,6 +300,10 @@
 		47291AA119F51DE20015E575 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DynamicFrameworkLoading",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +311,10 @@
 		47291AA219F51DE20015E575 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DynamicFrameworkLoading",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +338,7 @@
 				47291AA219F51DE20015E575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
